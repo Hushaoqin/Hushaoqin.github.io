@@ -6,13 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/10 | Hexo</title>
+  <title>数据库案例 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2019&#x2F;10&#x2F;index.html">
+  <meta name="description" content="mysql&amp;gt; create database shoppingdb;Query OK, 1 row affected mysql&amp;gt; use shoppingdb;Database changedmysql&amp;gt; create table goodsinfo(id int auto_increment primary key,goodsname varchar(255),goodsnu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库案例">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;22&#x2F;%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A1%88%E4%BE%8B&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="mysql&amp;gt; create database shoppingdb;Query OK, 1 row affected mysql&amp;gt; use shoppingdb;Database changedmysql&amp;gt; create table goodsinfo(id int auto_increment primary key,goodsname varchar(255),goodsnu">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-22T04:18:54.148Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -149,103 +152,171 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-数据库案例" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      数据库案例
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/22/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A1%88%E4%BE%8B/" class="archive-article-date">
+
+        
+        <a href="/2019/10/22/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A1%88%E4%BE%8B/" class="archive-article-date">
   	<time datetime="2019-10-22T04:18:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-22</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/22/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A1%88%E4%BE%8B/">数据库案例</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>mysql&gt; create database shoppingdb;<br>Query OK, 1 row affected</p>
+<p>mysql&gt; use shoppingdb;<br>Database changed<br>mysql&gt; create table goodsinfo(id int auto_increment primary key,goodsname varchar(255),goodsnumber int,goodsprice float);<br>Query OK, 0 rows affected</p>
+<p>mysql&gt; insert goodsinfo values(1,’芒果家衬衫裙’,2,85);<br>Query OK, 1 row affected</p>
+<p>mysql&gt; insert into goodsinfo(goodsname,goodsnumber,goodsprice) values(‘连衣裙’,1,65),(‘半身裙’,2,35),(‘针织裙’,1,45),(‘皮裙’,1,40),(‘雪纺裙’,1,99.9),(‘牛仔裙’,1,55),(‘T恤’,1,30),(‘牛仔裤’,1,69),(‘休闲裤’,1,39),(‘毛衣’,1,29.9),(‘马甲’,2,59.9),(‘风衣’,1,148),(‘单肩包’,1,59.9),(‘运动套装’,1,78);<br>Query OK, 14 rows affected<br>Records: 14  Duplicates: 0  Warnings: 0</p>
+<p>mysql&gt; select * from goodsinfo;<br>+—-+————–+————-+————+<br>| id | goodsname    | goodsnumber | goodsprice |<br>+—-+————–+————-+————+<br>|  1 | 芒果家衬衫裙 |           2 |         85 |<br>|  2 | 连衣裙       |           1 |         65 |<br>|  3 | 半身裙       |           2 |         35 |<br>|  4 | 针织裙       |           1 |         45 |<br>|  5 | 皮裙         |           1 |         40 |<br>|  6 | 雪纺裙       |           1 |       99.9 |<br>|  7 | 牛仔裙       |           1 |         55 |<br>|  8 | T恤          |           1 |         30 |<br>|  9 | 牛仔裤       |           1 |         69 |<br>| 10 | 休闲裤       |           1 |         39 |<br>| 11 | 毛衣         |           1 |       29.9 |<br>| 12 | 马甲         |           2 |       59.9 |<br>| 13 | 风衣         |           1 |        148 |<br>| 14 | 单肩包       |           1 |       59.9 |<br>| 15 | 运动套装     |           1 |         78 |<br>+—-+————–+————-+————+<br>15 rows in set</p>
+<p>mysql&gt; select goodsname,goodsprice from goodsinfo;<br>+————–+————+<br>| goodsname    | goodsprice |<br>+————–+————+<br>| 芒果家衬衫裙 |         85 |<br>| 连衣裙       |         65 |<br>| 半身裙       |         35 |<br>| 针织裙       |         45 |<br>| 皮裙         |         40 |<br>| 雪纺裙       |       99.9 |<br>| 牛仔裙       |         55 |<br>| T恤          |         30 |<br>| 牛仔裤       |         69 |<br>| 休闲裤       |         39 |<br>| 毛衣         |       29.9 |<br>| 马甲         |       59.9 |<br>| 风衣         |        148 |<br>| 单肩包       |       59.9 |<br>| 运动套装     |         78 |<br>+————–+————+<br>15 rows in set</p>
+<p>mysql&gt; select goodsname as 商品名称,goodsnumber as 商品数量,goodsprice as 商品价格 from stuinfo;<br>1146 - Table ‘shoppingdb.stuinfo’ doesn’t exist<br>mysql&gt; select goodsname as 商品名称,goodsnumber as 商品数量,goodsprice as 商品价格 from goodsinfo;<br>+————–+———-+———-+<br>| 商品名称     | 商品数量 | 商品价格 |<br>+————–+———-+———-+<br>| 芒果家衬衫裙 |        2 |       85 |<br>| 连衣裙       |        1 |       65 |<br>| 半身裙       |        2 |       35 |<br>| 针织裙       |        1 |       45 |<br>| 皮裙         |        1 |       40 |<br>| 雪纺裙       |        1 |     99.9 |<br>| 牛仔裙       |        1 |       55 |<br>| T恤          |        1 |       30 |<br>| 牛仔裤       |        1 |       69 |<br>| 休闲裤       |        1 |       39 |<br>| 毛衣         |        1 |     29.9 |<br>| 马甲         |        2 |     59.9 |<br>| 风衣         |        1 |      148 |<br>| 单肩包       |        1 |     59.9 |<br>| 运动套装     |        1 |       78 |<br>+————–+———-+———-+<br>15 rows in set</p>
+<p>mysql&gt; select * from goodsinfo where goodsname=’连衣裙’;<br>+—-+———–+————-+————+<br>| id | goodsname | goodsnumber | goodsprice |<br>+—-+———–+————-+————+<br>|  2 | 连衣裙    |           1 |         65 |<br>+—-+———–+————-+————+<br>1 row in set</p>
+<p>mysql&gt; select * from goodsinfo where goodsprice=40;<br>+—-+———–+————-+————+<br>| id | goodsname | goodsnumber | goodsprice |<br>+—-+———–+————-+————+<br>|  5 | 皮裙      |           1 |         40 |<br>+—-+———–+————-+————+<br>1 row in set</p>
+<p>mysql&gt; select * from goodsinfo;<br>+—-+————–+————-+————+<br>| id | goodsname    | goodsnumber | goodsprice |<br>+—-+————–+————-+————+<br>|  1 | 芒果家衬衫裙 |           2 |         85 |<br>|  2 | 连衣裙       |           1 |         65 |<br>|  3 | 半身裙       |           2 |         35 |<br>|  4 | 针织裙       |           1 |         45 |<br>|  5 | 皮裙         |           1 |         40 |<br>|  6 | 雪纺裙       |           1 |       99.9 |<br>|  7 | 牛仔裙       |           1 |         55 |<br>|  8 | T恤          |           1 |         30 |<br>|  9 | 牛仔裤       |           1 |         69 |<br>| 10 | 休闲裤       |           1 |         39 |<br>| 11 | 毛衣         |           1 |       29.9 |<br>| 12 | 马甲         |           2 |       59.9 |<br>| 13 | 风衣         |           1 |        148 |<br>| 14 | 单肩包       |           1 |       59.9 |<br>| 15 | 运动套装     |           1 |         78 |<br>+—-+————–+————-+————+<br>15 rows in set</p>
+<p>mysql&gt; insert into goodsinfo(goodsname,goodsnumber,goodsprice) values(‘连衣裙’,1,65),(‘半身裙’,2,35),(‘针织裙’,1,45),(‘皮裙’,1,40),(‘雪纺裙’,1,99.9),(‘牛仔裙’,1,55),(‘T恤’,1,30),(‘牛仔裤’,1,69),(‘休闲裤’,1,39),(‘毛衣’,1,29.9),(‘马甲’,2,59.9),(‘风衣’,1,148),(‘单肩包’,1,59.9),(‘运动套装’,1,78);<br>Query OK, 14 rows affected<br>Records: 14  Duplicates: 0  Warnings: 0</p>
+<p>mysql&gt; select * from goodsinfo;<br>+—-+————–+————-+————+<br>| id | goodsname    | goodsnumber | goodsprice |<br>+—-+————–+————-+————+<br>|  1 | 芒果家衬衫裙 |           2 |         85 |<br>|  2 | 连衣裙       |           1 |         65 |<br>|  3 | 半身裙       |           2 |         35 |<br>|  4 | 针织裙       |           1 |         45 |<br>|  5 | 皮裙         |           1 |         40 |<br>|  6 | 雪纺裙       |           1 |       99.9 |<br>|  7 | 牛仔裙       |           1 |         55 |<br>|  8 | T恤          |           1 |         30 |<br>|  9 | 牛仔裤       |           1 |         69 |<br>| 10 | 休闲裤       |           1 |         39 |<br>| 11 | 毛衣         |           1 |       29.9 |<br>| 12 | 马甲         |           2 |       59.9 |<br>| 13 | 风衣         |           1 |        148 |<br>| 14 | 单肩包       |           1 |       59.9 |<br>| 15 | 运动套装     |           1 |         78 |<br>| 16 | 连衣裙       |           1 |         65 |<br>| 17 | 半身裙       |           2 |         35 |<br>| 18 | 针织裙       |           1 |         45 |<br>| 19 | 皮裙         |           1 |         40 |<br>| 20 | 雪纺裙       |           1 |       99.9 |<br>| 21 | 牛仔裙       |           1 |         55 |<br>| 22 | T恤          |           1 |         30 |<br>| 23 | 牛仔裤       |           1 |         69 |<br>| 24 | 休闲裤       |           1 |         39 |<br>| 25 | 毛衣         |           1 |       29.9 |<br>| 26 | 马甲         |           2 |       59.9 |<br>| 27 | 风衣         |           1 |        148 |<br>| 28 | 单肩包       |           1 |       59.9 |<br>| 29 | 运动套装     |           1 |         78 |<br>+—-+————–+————-+————+<br>29 rows in set</p>
+<p>mysql&gt; delete from goodsinfo where id&gt;=16;<br>Query OK, 14 rows affected</p>
+<p>mysql&gt; select * from goodsinfo;<br>+—-+————–+————-+————+<br>| id | goodsname    | goodsnumber | goodsprice |<br>+—-+————–+————-+————+<br>|  1 | 芒果家衬衫裙 |           2 |         85 |<br>|  2 | 连衣裙       |           1 |         65 |<br>|  3 | 半身裙       |           2 |         35 |<br>|  4 | 针织裙       |           1 |         45 |<br>|  5 | 皮裙         |           1 |         40 |<br>|  6 | 雪纺裙       |           1 |       99.9 |<br>|  7 | 牛仔裙       |           1 |         55 |<br>|  8 | T恤          |           1 |         30 |<br>|  9 | 牛仔裤       |           1 |         69 |<br>| 10 | 休闲裤       |           1 |         39 |<br>| 11 | 毛衣         |           1 |       29.9 |<br>| 12 | 马甲         |           2 |       59.9 |<br>| 13 | 风衣         |           1 |        148 |<br>| 14 | 单肩包       |           1 |       59.9 |<br>| 15 | 运动套装     |           1 |         78 |<br>+—-+————–+————-+————+<br>15 rows in set</p>
+<p>mysql&gt; update goodsinfo set goodsname=’苹果’ where godsprice=78;<br>1054 - Unknown column ‘godsprice’ in ‘where clause’<br>mysql&gt; update goodsinfo set goodsname=’苹果’ where goodsprice=78;<br>Query OK, 1 row affected<br>Rows matched: 1  Changed: 1  Warnings: 0</p>
+<p>mysql&gt; select * from goodsinfo;<br>+—-+————–+————-+————+<br>| id | goodsname    | goodsnumber | goodsprice |<br>+—-+————–+————-+————+<br>|  1 | 芒果家衬衫裙 |           2 |         85 |<br>|  2 | 连衣裙       |           1 |         65 |<br>|  3 | 半身裙       |           2 |         35 |<br>|  4 | 针织裙       |           1 |         45 |<br>|  5 | 皮裙         |           1 |         40 |<br>|  6 | 雪纺裙       |           1 |       99.9 |<br>|  7 | 牛仔裙       |           1 |         55 |<br>|  8 | T恤          |           1 |         30 |<br>|  9 | 牛仔裤       |           1 |         69 |<br>| 10 | 休闲裤       |           1 |         39 |<br>| 11 | 毛衣         |           1 |       29.9 |<br>| 12 | 马甲         |           2 |       59.9 |<br>| 13 | 风衣         |           1 |        148 |<br>| 14 | 单肩包       |           1 |       59.9 |<br>| 15 | 苹果         |           1 |         78 |<br>+—-+————–+————-+————+<br>15 rows in set</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/22/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%A1%88%E4%BE%8B/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/22/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="archive-article-date">
-  	<time datetime="2019-10-22T04:13:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-22</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/22/%E6%95%B0%E6%8D%AE%E5%BA%93/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数据库</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/22/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/22/Java%E5%9F%BA%E7%A1%80/" class="archive-article-date">
-  	<time datetime="2019-10-22T04:02:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/22/Java%E5%9F%BA%E7%A1%80/">笔记</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -268,8 +339,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
